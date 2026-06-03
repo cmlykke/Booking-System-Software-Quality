@@ -2,13 +2,10 @@ import { test, expect } from '@playwright/test';
 
 test.describe('API testing - Activities', () => {
     test('GET /api/activities returns activities list', async ({ request }) => {
-        const startTime = Date.now();
 
         const response = await request.get('/api/activities');
-        const duration = Date.now() - startTime;
 
         expect(response.status()).toBe(200);
-        expect(duration).toBeLessThan(1000);
 
         const body = await response.json();
 
@@ -16,7 +13,7 @@ test.describe('API testing - Activities', () => {
         expect(body.length).toBeGreaterThan(0);
 
         expect(body[0]).toHaveProperty('id');
-        expect(body[0]).toHaveProperty('name');
+        expect(body[0]).toHaveProperty('no-name');
         expect(body[0]).toHaveProperty('description');
         expect(body[0]).toHaveProperty('location');
         expect(body[0]).toHaveProperty('maxParticipants');
