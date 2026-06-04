@@ -1,7 +1,8 @@
 1. setup .env 
 2. cd .\database\
-3. docker compose -f docker-compose.psql.yml up -d
-4. mvn spring-boot:run or .\mvnw.cmd spring-boot:run
+3. docker compose -f .\database\docker-compose.psql.yml down --volumes --remove-orphans
+4. docker compose -f .\database\docker-compose.psql.yml up -d
+5. mvn spring-boot:run or .\mvnw.cmd spring-boot:run
 
 take the database down and set it up again:
 `
@@ -30,4 +31,12 @@ For checking postrgres-db:
 3. Once logged in, go to your Dashboard.
 4. Copy your API Key
 the add the API key to the .env file.
+
+
+
+--- Tests ci -- to be deleted
+---- another change to test CI
+---third attempt at getting CI to work
+---  sttempt 004 to fix CI
+---- attempt 005 to fix CI
 

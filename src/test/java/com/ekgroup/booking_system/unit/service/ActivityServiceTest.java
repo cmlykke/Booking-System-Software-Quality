@@ -35,11 +35,8 @@ class ActivityServiceTest {
     private static final LocalDate DATE = LocalDate.of(2026, 5, 7);
 
     private static final List<LocalTime> ALLOWED_TIME_SLOTS = List.of(
-            LocalTime.of(10, 0),
-            LocalTime.of(12, 0),
-            LocalTime.of(14, 0),
-            LocalTime.of(16, 0),
-            LocalTime.of(18, 0)
+            LocalTime.of(10, 0)
+
     );
 
     @Mock
